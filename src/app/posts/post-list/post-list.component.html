@@ -1,0 +1,9 @@
+<mat-accordion *ngIf="posts.length > 0">
+    <mat-expansion-panel *ngFor="let item of posts; let i = index">
+        <mat-expansion-panel-header>
+            <h2>{{item.title}}</h2>
+        </mat-expansion-panel-header>
+            <p>{{item.content}}</p>
+    </mat-expansion-panel>
+</mat-accordion>
+<mat-spinner *ngIf="posts.length == 0"></mat-spinner>
