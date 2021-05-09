@@ -8,13 +8,4 @@ import { Post } from './models/post.model';
 })
 export class AppComponent {
   title = 'angular-project';
-  posts: Post[] = [];
-
-  onPostAdded(post) {
-    this.posts.push(post);
-  }
-
-  onPostDeleted() {
-    this.posts.pop();
-  }
 }
