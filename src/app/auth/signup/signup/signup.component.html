@@ -1,0 +1,13 @@
+<mat-card>
+    <form (ngSubmit)="onSignup()" [formGroup]="signupForm">
+        <mat-form-field>
+            <input matInput placeholder="Username" formControlName="username" required email>
+            <mat-error *ngIf="signupForm.get('username').invalid">Please enter valid username</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password" matInput placeholder="Password" formControlName="password" name="content" required>
+            <mat-error *ngIf="signupForm.get('password').invalid">Please enter valid password</mat-error>
+        </mat-form-field>
+        <button mat-raised-button  type="submit">Signup</button>
+    </form>
+</mat-card>
